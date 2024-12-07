@@ -15,29 +15,36 @@ import singer from "./assets/Screenshot 2024-12-01 115808.png";
 import musicBand from "./assets/Screenshot 2024-12-01 120233.png"
 import beerParty from "./assets/Screenshot 2024-12-01 141232.png"
 import groupPic from "./assets/Screenshot 2024-12-01 141028.png"
+import registrationDesk from "./assets/Screenshot 2024-12-02 123104.png"
+import registerSpeaker from "./assets/Screenshot 2024-12-02 123722.png"
+import cricketMatch from "./assets/Screenshot 2024-11-30 175043.png"
+import football from "./assets/Screenshot 2024-12-02 122342.png"
+import whiteComedian from "./assets/Screenshot 2024-12-04 221759.png"
+import blackComedian from "./assets/Screenshot 2024-12-04 222719.png"
 
 const Carousal = () => {
   const slides = [
     {
-      displayUrl: bharatImage,
-      backgroundUrl: bharatBackground,
-      title: "Inaugural",
-      description: "The Homecoming inaugural ceremony marks the beginning of the celebrations with a classical performance, traditional lamp lighting, and heartfelt speeches by distinguished guests.",
-      timeAndVenue: "6:30 to 7:30 pm @Open Auditorium",
+      displayUrl: registerSpeaker,
+      backgroundUrl: registrationDesk,
+      title: "Registrations",
+      description: "Kick off your homecoming with a smooth, welcoming registration. Check in, collect your essentials, and get a rundown of the day’s exciting activities—your first step to reconnecting and reliving your time at GITAM!",
+      timeAndVenue: "2:00 to 3:00 pm @Open Auditorium",
     },
+    
     {
       displayUrl: classroom,
       backgroundUrl: alumni,
       title: "Departmental Visits",
       description: "Revisit the classrooms and labs that shaped your journey. Reconnect with professors, explore new innovations, and see how your department has evolved.",
-      timeAndVenue: "3:00 to 6:30 pm @Your Department",
+      timeAndVenue: "3:00 to 5:00 pm @Your Department",
     },
     {
       displayUrl: friendsInCarnival,
       backgroundUrl: carnival,
       title: "Carnival",
       description: "Where nostalgia meets fun! Reconnect with old friends at our vibrant carnival with games, creative workshops, thrilling rides, and live performances. Relive cherished memories while enjoying delicious treats. ",
-      timeAndVenue: "3:00 to 6:30 pm @Coke Station Road",
+      timeAndVenue: "5:00 to 6:30 pm @Coke Station Road",
     },
     {
       displayUrl: racingCar,
@@ -47,17 +54,38 @@ const Carousal = () => {
       timeAndVenue: "5:00 to 6:30 pm @Mother Teresa Road",
     },
     {
+      displayUrl: football,
+      backgroundUrl: cricketMatch,
+      title: "Sports",
+      description: "Hit the field, relive the adrenaline, and reignite your competitive spirit! Join friendly matches, cheer for your teams, and celebrate the camaraderie and sportsmanship that made campus life unforgettable.",
+      timeAndVenue: "5:00 to 6:30 pm @Open Auditorium",
+    },
+    {
+      displayUrl: bharatImage,
+      backgroundUrl: bharatBackground,
+      title: "Inaugural",
+      description: "The Homecoming inaugural ceremony marks the beginning of the celebrations with a classical performance, traditional lamp lighting, and heartfelt speeches by distinguished guests.",
+      timeAndVenue: "6:30 to 7:30 pm @Open Auditorium",
+    },
+    {
       displayUrl: singer,
       backgroundUrl: musicBand,
       title: "Culturals",
       description: "Celebrate the vibrant spirit of GITAM! Enjoy an evening of music, dance, drama, and art that brings back memories, showcase talent, and reconnects you with the energy of campus life.",
-      timeAndVenue: "6:30 to 8:00 pm @Dental Area",
+      timeAndVenue: "7:30 to 8:00 pm @Dental Area",
+    },
+    {
+      displayUrl: whiteComedian,
+      backgroundUrl: blackComedian,
+      title: "Stand-up Comedy",
+      description: "Laugh out loud as talented comedians take the stage for a night of fun and nostalgia. Sit back, relax, and enjoy an evening filled with humor that brings back the lighthearted spirit of campus life!",
+      timeAndVenue: "8:00 to 8:30 pm @Open Auditorium",
     },{
       displayUrl: beerParty,
       backgroundUrl: groupPic,
       title: "Networking Dinner",
       description: "Connect, collborate, and catch up over an evening of good food and great conversations. Meet fellow alumni, faculty, and students, and build valuable connections that last beyond the event.",
-      timeAndVenue: "7:30 to 9:00 pm @Dental Area",
+      timeAndVenue: "8:30 to 9:30 pm @Dental Area",
     }
   ];
 
@@ -127,17 +155,18 @@ const Carousal = () => {
 
       {/* Left and Right arrow buttons */}
       <button
-        onClick={handlePrevClick}
-        className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
-      >
-        &lt;
-      </button>
-      <button
-        onClick={handleNextClick}
-        className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full"
-      >
-        &gt;
-      </button>
+  onClick={handlePrevClick}
+  className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-white text-black p-4 rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
+>
+  &lt;
+</button>
+<button
+  onClick={handleNextClick}
+  className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-white text-black p-4 rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
+>
+  &gt;
+</button>
+
 
       {/* Background image and gradient overlay */}
       <img
